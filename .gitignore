@@ -5,6 +5,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# node files
+node_modules/
+swagger-ui-master/
+
 # Runtime data
 pids
 *.pid
