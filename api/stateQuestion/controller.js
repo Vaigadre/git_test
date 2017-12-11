@@ -3,9 +3,9 @@ const StateQuestion = require ('./model')
 
 module.exports.setStateQue = function (req, res) {
     let que = new StateQuestion ({
-        subject: req.body.subject,
-        title: req.body.title,
-        desc: req.body.desc
+        name: req.body.name,
+        state: req.body.state,
+        gradedCells: req.body.gradedCells
     })
 
     StateQuestion.create(que).then(function(que){

@@ -2,9 +2,8 @@ const Answer = require ('./model')
 
 module.exports.setAnswer = function (req, res)  {
     let answer = new Answer ({
-        subject: req.body.subject,
-        que_id: req.body.que_id,
-        answer: req.body.answer
+        questionId: req.body.questionId,
+        gradedCells: req.body.gradedCells
     })
 
     Answer.create(answer).then ( (ans) => {
@@ -14,7 +13,7 @@ module.exports.setAnswer = function (req, res)  {
 }
 
 module.exports.getAnswerById = function (req, res) {
-    Answer.findOne({que_id:req.params.id}, {"__v":0, '_id':0}).then( (ans) => {
+    Answer.findOne({questionId:req.params.id}, {"__v":0, '_id':0}).then( (ans) => {
         res.json(ans)
     })
 }
