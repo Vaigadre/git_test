@@ -9,12 +9,10 @@ const controller = require ('./controller')
  *     properties:
  *       name:
  *         type: string
- *       breed:
- *         type: string
- *       age:
- *         type: integer
- *       sex:
- *         type: string
+ *       state:
+ *         type: object
+ *       gradedCells:
+ *         type: array
  */
 
 /**
